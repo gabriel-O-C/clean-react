@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json|tsx)\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint":  "eslint 'src/**' --fix"
   },
   "keywords": [],
   "author": "",
