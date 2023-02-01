@@ -1,3 +1,4 @@
 {
-  "*.{ts,tsx}": ["eslint 'src/**' --fix ", "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json|tsx)\""]
+  "*.{ts,tsx}": ["eslint 'src/**' --fix "],
+  "*.{ts, tsx}": [ "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json|tsx)\""]
 }
