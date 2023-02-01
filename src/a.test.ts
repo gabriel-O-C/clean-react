@@ -1,6 +1,6 @@
-describe('a', () => {
+describe("a", () => {
   it("aaa", () => {
-    console.log('aaaa')
+    console.log('aaaa');
     expect(1).toBe(1);
   });
 });
