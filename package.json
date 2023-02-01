@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json|tsx)\""
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json|tsx)\"",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
