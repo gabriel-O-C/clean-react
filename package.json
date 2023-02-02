@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
+    "test:watch": "pnpm test -- --watch",
+    "test:staged": "pnpm test -- --findRelatedTests",
+    "test:ci": "pnpm test -- --coverage",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json|tsx)\"",
     "prepare": "husky install",
     "lint": "eslint 'src/**' --fix"
