@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "experimentalDecorators": true,
-    "baseUrl": ".",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    },
     "outDir": "build/dist",
     "module": "esnext",
     "target": "es2017",
