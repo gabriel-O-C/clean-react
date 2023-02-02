@@ -10,9 +10,13 @@ export class RemoteAuthentication {
   ) {}
 
   async auth(params: AuthenticationParams): Promise<void> {
-    const response = await this.httpPostClient.post({ url: this.url, body: params });
-    switch(response.statusCode) {
-      case HttpStatusCode.unathorized: throw new InvalidCredentialsError();
+    const response = await this.httpPostClient.post({
+      url: this.url,
+      body: params,
+    });
+    switch (response.statusCode) {
+      case HttpStatusCode.unathorized:
+        throw new InvalidCredentialsError();
     }
   }
 }
