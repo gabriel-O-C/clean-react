@@ -29,8 +29,6 @@
     "webpack",
     "jest",
     "src/setupTests.ts"
-  ],  
-  "parserOptions": {
-      "project": ["./tsconfig.json"]
-    }
+  ],
+
 }
