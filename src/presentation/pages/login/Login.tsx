@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer, LoginHeader, Spinner } from "@/presentation/components";
+import { Footer, Input, LoginHeader, Spinner } from "@/presentation/components";
 
 const Login: React.FC = () => {
   return (
@@ -9,24 +9,9 @@ const Login: React.FC = () => {
         <h2 className="text-center text-[16px] font-bold uppercase text-primaryDark">
           Login
         </h2>
-        <div className="relative flex items-center">
-          <input
-            type="email"
-            name="email"
-            placeholder="Digite seu e-mail"
-            className="flex-grow flex-row rounded border-[1px] border-primaryLight px-1 leading-10 focus:outline-primaryLight"
-          />
-          <span className="absolute right-2 cursor-help py-1">❌</span>
-        </div>
-        <div className="relative flex items-center">
-          <input
-            type="password"
-            name="password"
-            placeholder="Digite sua senha"
-            className="flex-grow flex-row rounded border-[1px] border-primaryLight px-1 leading-10"
-          />
-          <span className="absolute right-2 cursor-help py-1">❌</span>
-        </div>
+        <Input type="email" name="email" placeholder="Digite seu e-mail" />
+        <Input type="password" name="password" placeholder="Digite sua senha" />
+
         <button
           type="submit"
           className="h-8 rounded-lg border-[1px] border-primaryLight bg-primary px-8 text-[16px] text-white hover:opacity-90"
