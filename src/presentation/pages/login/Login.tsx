@@ -1,13 +1,10 @@
 import React from "react";
-import { Logo, Spinner } from "@/presentation/components";
+import { LoginHeader, Spinner } from "@/presentation/components";
 
 const Login: React.FC = () => {
   return (
     <div className="flex h-screen w-full flex-col justify-between">
-      <header className="flex flex-col items-center justify-center border-t-[40px] border-primaryDark bg-primary">
-        <Logo />
-        <h1 className="m-4 text-white">4 devs - Enquetes para programadores</h1>
-      </header>
+      <LoginHeader />
       <form className="flex w-[400px] flex-col justify-center gap-4 self-center rounded-lg bg-white p-8 shadow-md">
         <h2 className="text-center text-[16px] font-bold uppercase text-primaryDark">
           Login
