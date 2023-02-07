@@ -1,12 +1,11 @@
 import React from "react";
-import Logo from "@/presentation/assets/logo.svg";
-import Spinner from "@/presentation/components/Spinner";
+import { Logo, Spinner } from "@/presentation/components";
 
 const Login: React.FC = () => {
   return (
     <div className="flex h-screen w-full flex-col justify-between">
       <header className="flex flex-col items-center justify-center border-t-[40px] border-primaryDark bg-primary">
-        <img src={Logo} className="mt-10" />
+        <Logo />
         <h1 className="m-4 text-white">4 devs - Enquetes para programadores</h1>
       </header>
       <form className="flex w-[400px] flex-col justify-center gap-4 self-center rounded-lg bg-white p-8 shadow-md">

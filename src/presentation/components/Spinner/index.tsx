@@ -1,7 +1,7 @@
 import React from "react";
 import "./spinner.css";
 
-const Spinner: React.FC = () => {
+export const Spinner: React.FC = () => {
   return (
     <div className="lds-ellipsis">
       <div></div>
@@ -11,5 +11,3 @@ const Spinner: React.FC = () => {
     </div>
   );
 };
-
-export default Spinner;
