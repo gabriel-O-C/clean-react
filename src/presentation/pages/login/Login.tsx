@@ -1,5 +1,10 @@
 import React from "react";
-import { Footer, Input, LoginHeader, Spinner } from "@/presentation/components";
+import {
+  Footer,
+  FormStatus,
+  Input,
+  LoginHeader,
+} from "@/presentation/components";
 
 const Login: React.FC = () => {
   return (
@@ -21,12 +26,7 @@ const Login: React.FC = () => {
         <span className="cursor-pointer text-center lowercase text-primary hover:underline">
           Criar conta
         </span>
-        <div className="flex flex-col items-center justify-center gap-8">
-          <div className="top-0 left-0 flex h-full w-full items-center justify-center">
-            <Spinner />
-          </div>
-          <span className="text-primaryLight">Erro</span>
-        </div>
+        <FormStatus />
       </form>
       <Footer />
     </div>
