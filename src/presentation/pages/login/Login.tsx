@@ -1,5 +1,5 @@
 import React from "react";
-import { LoginHeader, Spinner } from "@/presentation/components";
+import { Footer, LoginHeader, Spinner } from "@/presentation/components";
 
 const Login: React.FC = () => {
   return (
@@ -43,7 +43,7 @@ const Login: React.FC = () => {
           <span className="text-primaryLight">Erro</span>
         </div>
       </form>
-      <footer className="h-10 bg-primary"></footer>
+      <Footer />
     </div>
   );
 };
