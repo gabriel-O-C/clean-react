@@ -6,7 +6,7 @@ import {
   LoginHeader,
 } from "@/presentation/components";
 
-const Login: React.FC = () => {
+export const Login: React.FC = () => {
   return (
     <div className="flex h-screen w-full flex-col justify-between">
       <LoginHeader />
@@ -33,4 +33,3 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;

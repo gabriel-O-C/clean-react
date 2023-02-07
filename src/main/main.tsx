@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Login from "@/presentation/pages/login/Login";
+import { Login } from "@/presentation/pages/";
 
 import "./index.css";
 
