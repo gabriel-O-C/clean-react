@@ -7,8 +7,17 @@ type Props = React.DetailedHTMLProps<
 >;
 
 export const Input: React.FC<Props> = (props: Props) => {
-  const { errorState } = useContext(Context);
-  const error = errorState[props.name];
+  const { state, setState } = useContext(Context);
+  const error = state[`${props.name}Error`];
+
+  const handleChange = (
+    event: React.SyntheticEvent<HTMLInputElement>
+  ): void => {
+    setState({
+      ...state,
+      [event.currentTarget.name]: event.currentTarget.value,
+    });
+  };
 
   const getStatus = (): string => {
     return "❌";
@@ -22,6 +31,8 @@ export const Input: React.FC<Props> = (props: Props) => {
     <div className="relative flex items-center">
       <input
         {...props}
+        data-testid={props.name}
+        onChange={handleChange}
         className="flex-grow flex-row rounded border-[1px] border-primaryLight px-1 leading-10 focus:outline-primaryLight"
       />
       <span

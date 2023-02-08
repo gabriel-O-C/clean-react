@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Footer,
   FormStatus,
@@ -7,20 +7,29 @@ import {
 } from "@/presentation/components";
 
 import Context from "@/presentation/contexts/form/form-context";
+import { type Validation } from "@/presentation/protocols/validation";
 
-export const Login: React.FC = () => {
-  const [state] = useState({
+type Props = {
+  validation: Validation;
+};
+
+export const Login: React.FC<Props> = ({ validation }: Props) => {
+  const [state, setState] = useState({
     isLoading: false,
-  });
-  const [errorState] = useState({
     errorMessage: "",
-    email: "Campo obrigatório",
-    password: "Campo obrigatório",
+    email: "",
+    emailError: "Campo obrigatório",
+    passwordError: "Campo obrigatório",
   });
+
+  useEffect(() => {
+    validation.validate({ email: state.email });
+  }, [state.email]);
+
   return (
     <div className="flex h-screen w-full flex-col justify-between">
       <LoginHeader />
-      <Context.Provider value={{ state, errorState }}>
+      <Context.Provider value={{ state, setState }}>
         <form className="flex w-[400px] flex-col justify-center gap-4 self-center rounded-lg bg-white p-8 shadow-md">
           <h2 className="text-center text-[16px] font-bold uppercase text-primaryDark">
             Login
