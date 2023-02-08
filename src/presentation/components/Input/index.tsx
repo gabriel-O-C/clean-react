@@ -9,14 +9,14 @@ type Props = React.DetailedHTMLProps<
 export const Input: React.FC<Props> = (props: Props) => {
   const { errorState } = useContext(Context);
   const error = errorState[props.name];
-  
+
   const getStatus = (): string => {
-    return "❌"
-  }
+    return "❌";
+  };
 
   const getTitle = (): string => {
-    return error
-  }
+    return error;
+  };
 
   return (
     <div className="relative flex items-center">
@@ -24,7 +24,13 @@ export const Input: React.FC<Props> = (props: Props) => {
         {...props}
         className="flex-grow flex-row rounded border-[1px] border-primaryLight px-1 leading-10 focus:outline-primaryLight"
       />
-      <span title={getTitle()} data-testid={`${props.name}-status`} className="absolute right-2 cursor-help py-1">{getStatus()}</span>
+      <span
+        title={getTitle()}
+        data-testid={`${props.name}-status`}
+        className="absolute right-2 cursor-help py-1"
+      >
+        {getStatus()}
+      </span>
     </div>
   );
 };
