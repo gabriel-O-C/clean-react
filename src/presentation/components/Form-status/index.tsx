@@ -14,7 +14,9 @@ export const FormStatus: React.FC = () => {
         </div>
       ) : null}
 
-      {errorMessage ? <span className="text-primaryLight">{errorMessage}</span> : null }
+      {errorMessage ? (
+        <span className="text-primaryLight">{errorMessage}</span>
+      ) : null}
     </div>
   );
 };

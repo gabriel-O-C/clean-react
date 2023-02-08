@@ -9,14 +9,14 @@ import {
 import Context from "@/presentation/contexts/form/form-context";
 
 type StateProps = {
-  isLoading: boolean
-  errorMessage: string
-}
+  isLoading: boolean;
+  errorMessage: string;
+};
 
 export const Login: React.FC = () => {
   const [state] = useState<StateProps>({
     isLoading: false,
-    errorMessage: ""
+    errorMessage: "",
   });
   return (
     <div className="flex h-screen w-full flex-col justify-between">
@@ -27,7 +27,11 @@ export const Login: React.FC = () => {
             Login
           </h2>
           <Input type="email" name="email" placeholder="Digite seu e-mail" />
-          <Input type="password" name="password" placeholder="Digite sua senha" />
+          <Input
+            type="password"
+            name="password"
+            placeholder="Digite sua senha"
+          />
 
           <button
             type="submit"
@@ -40,7 +44,6 @@ export const Login: React.FC = () => {
           </span>
           <FormStatus />
         </form>
-
       </Context.Provider>
       <Footer />
     </div>
