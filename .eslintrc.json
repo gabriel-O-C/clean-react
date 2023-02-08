@@ -23,7 +23,7 @@
     "@typescript-eslint/no-confusing-void-expression": "off",
     "@typescript-eslint/prefer-nullish-coalescing": "off",
     "react/react-in-jsx-scope": "off",
-    "css(unknownAtRules)": "off"
+    "react/prop-types": "off"
   },
   "settings": {
     "react": {

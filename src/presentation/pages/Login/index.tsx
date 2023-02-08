@@ -8,20 +8,19 @@ import {
 
 import Context from "@/presentation/contexts/form/form-context";
 
-type StateProps = {
-  isLoading: boolean;
-  errorMessage: string;
-};
-
 export const Login: React.FC = () => {
-  const [state] = useState<StateProps>({
+  const [state] = useState({
     isLoading: false,
+  });
+  const [errorState] = useState({
     errorMessage: "",
+    email: "Campo obrigatório",
+    password: "Campo obrigatório",
   });
   return (
     <div className="flex h-screen w-full flex-col justify-between">
       <LoginHeader />
-      <Context.Provider value={state}>
+      <Context.Provider value={{ state, errorState }}>
         <form className="flex w-[400px] flex-col justify-center gap-4 self-center rounded-lg bg-white p-8 shadow-md">
           <h2 className="text-center text-[16px] font-bold uppercase text-primaryDark">
             Login
