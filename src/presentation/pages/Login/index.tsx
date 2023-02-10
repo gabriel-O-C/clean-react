@@ -27,8 +27,7 @@ export const Login: React.FC<Props> = ({ validation }: Props) => {
     setState({
       ...state,
       emailError: validation.validate("email", state.email),
-      passwordError: validation.validate("password", state.password)
-
+      passwordError: validation.validate("password", state.password),
     });
   }, [state.email, state.password]);
 
