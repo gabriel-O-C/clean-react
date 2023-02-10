@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Spinner } from "../Spinner";
 import Context from "@/presentation/contexts/form/form-context";
+
 export const FormStatus: React.FC = () => {
   const { state } = useContext(Context);
   const { isLoading, errorMessage } = state;
