@@ -49,7 +49,7 @@ export const Login: React.FC<Props> = ({ validation }: Props) => {
           <button
             data-testid="submit"
             type="submit"
-            disabled
+            disabled={!!state.emailError || !!state.passwordError}
             className="h-8 rounded-lg border-[1px] border-primaryLight bg-primary px-8 text-[16px] text-white hover:opacity-90 disabled:bg-disabledBg disabled:text-disabledColor disabled:opacity-100"
           >
             Entrar
